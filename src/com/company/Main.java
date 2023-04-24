@@ -18,13 +18,9 @@ public class Main {
         Matcher matcher = pattern.matcher(input.toString());
         input = new StringBuilder(matcher.replaceAll(""));
         writer.write(input.toString());
-        try {
-            reader.close();
-            writer.close();
-        }
-        catch (IOException ex){
-            System.out.println("Error");
-        }
+        reader.close();
+        writer.close();
+        System.out.println("Error");
     }
 }
 
